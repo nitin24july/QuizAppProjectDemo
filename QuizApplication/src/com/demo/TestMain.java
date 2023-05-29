@@ -9,6 +9,7 @@ public class TestMain {
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		System.out.println("****** Student Registration******");
+		System.out.println("Sample Test....");
 		Connection con = DBUtil.getCon();
 		
 		String query = "insert into StudentRegistration values(?,?,?,?,?,?)";
