@@ -8,6 +8,8 @@ import java.util.Scanner;
 public class TestMain {
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		System.out.println("****** Student Registration******");
+		System.out.println("Sample Test....");
 		Connection con = DBUtil.getCon();
 		
 		String query = "insert into StudentRegistration values(?,?,?,?,?,?)";
@@ -53,6 +55,7 @@ public class TestMain {
 		int i = pst.executeUpdate();
 		System.out.println(i+"Data Inserted Successfully");
 		
+<<<<<<< HEAD
 		System.out.println("***** Student Login *****");
 		
 		StudentLogin st = new StudentLogin();
@@ -70,6 +73,8 @@ public class TestMain {
 		
 		int j = pst1.executeUpdate();
 		System.out.println(j+"Student Login Successfully");
+=======
+>>>>>>> b4500c53b2f93f82920343cbfff0b0fd29034baf
 		
 		con.close();
 		pst.close();
