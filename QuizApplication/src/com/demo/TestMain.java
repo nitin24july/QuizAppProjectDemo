@@ -53,10 +53,27 @@ public class TestMain {
 		int i = pst.executeUpdate();
 		System.out.println(i+"Data Inserted Successfully");
 		
+		System.out.println("***** Student Login *****");
+		
+		StudentLogin st = new StudentLogin();
+		String query1 = "Insert into StudentLogin values(?,?)";
+		PreparedStatement pst1 = con.prepareStatement(query1);
+		Scanner sc1 = new Scanner(System.in);
+		System.out.println("Enter User Name");
+        String stud_userName = sc1.next();
+        
+		System.out.println("Enter Student Password");
+		String stud_password = sc.next();
+		
+		pst1.setString(1, stud_userName);
+		pst1.setString(2, stud_password);
+		
+		int j = pst1.executeUpdate();
+		System.out.println(j+"Student Login Successfully");
+		
 		con.close();
 		pst.close();
-		
-		
 	}
-
+      
+      
 }
